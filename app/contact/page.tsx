@@ -28,7 +28,7 @@ const ContactPage = () => {
               {letter} 
             </motion.span>
           ))}
-          😊
+          📧
         </div>
       </div>
       <form 
