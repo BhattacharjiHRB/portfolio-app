@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import sendEmail from '@/actions/sendEmail'
 
-const contactPage = () => {
+const ContactPage = () => {
   
   const textMessage = "Contact Me"
 
@@ -63,4 +63,4 @@ const contactPage = () => {
   )
 }
 
-export default contactPage;
+export default ContactPage;

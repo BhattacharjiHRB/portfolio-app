@@ -1,6 +1,6 @@
 import React from 'react'
 
-const projextPage = () => {
+const ProjectPage = () => {
   return (
     <div className='min-h-screen flex flex-col items-center justify-center'>
 
@@ -10,4 +10,4 @@ const projextPage = () => {
   )
 }
 
-export default projextPage
+export default ProjectPage

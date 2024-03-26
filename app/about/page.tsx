@@ -6,7 +6,7 @@ import Image from 'next/image';
 import BrainSvg from '@/components/main/BrainSvg';
 
 
-const aboutPage = () => {
+const AboutPage = () => {
 
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({container: containerRef})
@@ -165,4 +165,4 @@ const aboutPage = () => {
   )
 }
 
-export default aboutPage;
+export default AboutPage;

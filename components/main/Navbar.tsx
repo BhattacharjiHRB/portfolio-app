@@ -31,7 +31,7 @@ const Navbar = () => {
             5e] mr-[15px] px-[20px] py-[10px] rounded-full space-x-5
              '>
               <a  href="/about" className=' cursor-pointer' > About </a >
-              <a  href="/projects" className=' cursor-pointer' > Projects </a >
+              {/* <a  href="/projects" className=' cursor-pointer' > Projects </a > */}
               <a  href="/contact" className=' cursor-pointer' > Contact </a >
 
             </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
               >
                   <motion.a variants={navLinks} href="/" className=' cursor-pointer' > Home </motion.a >
                   <motion.a variants={navLinks} href="/about" className=' cursor-pointer' > About </motion.a >
-                  <motion.a variants={navLinks} href="#Projects" className=' cursor-pointer' > Projects </motion.a >
+                  {/* <motion.a variants={navLinks} href="#Projects" className=' cursor-pointer' > Projects </motion.a > */}
                   <motion.a variants={navLinks} href="/contact" className=' cursor-pointer' > Contact </motion.a >
               </motion.div>
              )}   
