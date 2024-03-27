@@ -61,7 +61,7 @@ const ContactPage = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className=' bg-transparent border-b-2 border-purple-100'
+            className=' bg-transparent border-b-2 border-purple-100 focus:outline-none'
             placeholder="yourname@gmail.com"
           />
           <label htmlFor="message">Dear Hrittik,</label>
@@ -72,7 +72,7 @@ const ContactPage = () => {
             onChange={(e) => setMessage(e.target.value)}
             rows={10}
             required
-            className=' bg-transparent border-b-2 border-purple-100'
+            className=' bg-transparent border-b-2 border-purple-100 focus:outline-none'
             placeholder="write me a message"
           />
           <button
