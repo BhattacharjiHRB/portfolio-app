@@ -29,7 +29,7 @@ const HeroContent = () => {
         </motion.div>
         <motion.p
             variants={slideInFromLeft(1.5)}
-            className='text-sm md:text-lg text-gray-500 my-5 max-w-[600px]'
+            className='text-sm md:text-lg text-sky-100 my-5 max-w-[600px]'
         >
             
            I am experienced frontend developer skilled in HTML, CSS, and JavaScript, adept at crafting engaging user interfaces and seamless user experiences. Proficient in responsive design and cross-browser compatibility, with a keen eye for detail and a passion for creating visually appealing websites. Dedicated to staying abreast of industry trends and technologies to deliver cutting-edge solutions
