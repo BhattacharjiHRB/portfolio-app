@@ -6,6 +6,7 @@ import StarsCanvas from '../main/Starbg'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 
+
 const AnimationProvider = ({children}:{children: ReactNode}) => {
 
     const pathName = usePathname()
@@ -32,7 +33,7 @@ const AnimationProvider = ({children}:{children: ReactNode}) => {
         initial={{ height: "140vh" }}
         animate={{ height: "0vh", transition: { delay: 0.5, ease: "easeOut" } }}
         className='h-screen w-screen bg-gradient-to-b from-[#030014] to-purple-950 rounded-t-[100px] z-40' />
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
         <Navbar />
         {children}
         </div>

@@ -23,9 +23,9 @@ const Navbar = () => {
               className=' cursor-pointer hover:animate-spin'
 
             />
-            <span className='text-transparent text-4xl font-extrabold ml-2 md:text-xl bg-clip-text bg-gradient-to-r from-sky-500 to-violet-600'>HRBNeo</span>
+            <span className='text-transparent text-4xl font-extrabold ml-2 md:text-4xl bg-clip-text bg-gradient-to-r from-sky-500 to-violet-600'>HRBNeo</span>
         </a >
-          <div className='w-[500px] h-full flex flex-row items-center justify-center md:mr-20'>
+          <div className='w-[500px] h-full flex flex-row items-center justify-center'>
             <div className='flex items-center w-full h-auto 
             max-md:hidden justify-evenly border border-[#7042f861] bg-[#030014
             5e] mr-[15px] px-[20px] py-[10px] rounded-full space-x-5

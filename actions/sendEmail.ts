@@ -23,14 +23,15 @@ export default async function sendEmail(formData: FormData){
         }
     }
 
+    let data;
+    let error;
     try {
         
-        await resend.emails.send({
+        data = await resend.emails.send({
                 from: " Portfolio Contact <onboarding@resend.dev>",
                 to: "bhrittik23@gmail.com",
                 subject: "Client message from my portfolio",
                 reply_to: senderEmail as string,
-                // text: message as string,
                 react: React.createElement(ContactEmail, {
                     message: message,
                     senderEmail: senderEmail,
@@ -41,4 +42,6 @@ export default async function sendEmail(formData: FormData){
     } catch (error: any) {
         throw new Error(`Error Occured ${error.message}`)
     }
+
+    return { data, error }
 }

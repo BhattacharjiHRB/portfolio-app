@@ -4,6 +4,10 @@ import React, { useRef } from 'react'
 import {motion, useInView, useScroll} from 'framer-motion'
 import Image from 'next/image';
 import BrainSvg from '@/components/main/BrainSvg';
+import { slideInFromLeft } from '@/utils/motion';
+import EncriptVideo from '@/components/main/BrainSvg';
+import { Socials } from '@/utils/constants';
+import Link from 'next/link';
 
 
 const AboutPage = () => {
@@ -22,7 +26,7 @@ const AboutPage = () => {
 
   return (
     <div className=' h-full '>
-      <div className="h-full overflow-scroll lg:flex"  >
+      <div className="h-full overflow-scroll md:flex"  >
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           <div className="flex flex-col gap-10 justify-center">
             <Image
@@ -37,6 +41,26 @@ const AboutPage = () => {
             <p className="text-lg">
             As a Frontend Junior Developer, I specialize in crafting dynamic and user-friendly web experiences. With proficiency in technologies such as Next.js, Tailwind CSS, React, TypeScript, and JavaScript, I adeptly create responsive and intuitive interfaces that engage users effectively. Leveraging libraries like Axios, I ensure seamless communication between the frontend and backend systems, enhancing overall performance. Beyond my current skill set, I am eagerly looking to expand my knowledge to include ASP.NET for backend development. My enthusiasm for learning and dedication to mastering new technologies drive me to continually evolve and contribute innovative solutions to development projects.
             </p>
+            <div className='flex flex-row md:hidden space-x-5 '>
+            {Socials.map((social) => (
+                <Link  href={social.link} key={social.name} >
+                <Image 
+                  src={social.src}
+                  alt = {social.name}
+                  key={social.name}
+                  height={25}
+                  width={25}
+                  className='cursor-pointer'
+                />
+                </Link >
+              ))}
+            </div> 
+            <motion.a
+            href='/mycv.pdf'
+            className='py-2 button-primary text-center text-white cursor-pointer rounded-xl max-w-[200px] '
+            >
+              Dowload CV
+          </motion.a>
           </div>
 
           <div className="flex flex-col gap-12 justify-center" ref={skillRef} >
@@ -121,7 +145,6 @@ const AboutPage = () => {
               animate = {experienceShowing ? {x:0} : {} }
               transition={{delay: 0.8, ease: "easeIn"}}
               ref = {experienceRef}
-              className=""
             >
 
               <div className="flex justify-between h-48">

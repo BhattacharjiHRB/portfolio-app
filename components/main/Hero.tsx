@@ -1,20 +1,17 @@
 import React from 'react'
 import HeroContent from '../sub/HeroContent'
 
+
 const Hero = () => {
   return (
-    <div className='relative flex flex-col h-full w-full'>
-      <video
-        autoPlay
-        muted
-        loop
-        className='rotate-180 absolute top-[-340px] left-0 z-[1] w-full h-full object-cover'
-      >
-        <source src="/blackhole.webm" type='video/webm'  />
-      </video>
-      <HeroContent />
+    <div className="h-[50rem] w-full dark:bg-transparent dark:bg-dot-white/[0.2] bg-grid-white/[0.2] relative flex items-center justify-center">
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-transparent bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        <HeroContent />
       
     </div>
+
+   
   )
 }
 
