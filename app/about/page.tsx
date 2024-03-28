@@ -154,7 +154,7 @@ const AboutPage =() => {
                     Junior Software Developer
                   </div>
                   <div className="p-3 text-sm italic">
-                    I build web development, offering expertise in JavaScript
+                    I build websites, offering expertise in JavaScript
                     framework.{" "}
                   </div>
                   <div className="p-3 text-sky-400 text-sm font-semibold">
