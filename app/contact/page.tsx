@@ -7,7 +7,9 @@ import sendEmail from '@/actions/sendEmail';
 const ContactPage = () => {
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [alertMessage, setAlertMessage] = useState<string>('');
+  const [success, setSuccess] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+
 
   const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,9 +20,9 @@ const ContactPage = () => {
 
     try {
       const { data } = await sendEmail(formData);
-      setAlertMessage("Message sent successfully!");
+      setSuccess(true);
     } catch (error) {
-      setAlertMessage("Something went wrong!");
+      setError(true);
     }
   };
 
@@ -81,7 +83,8 @@ const ContactPage = () => {
           >
             Send
           </button>
-          {alertMessage && <div>{alertMessage}</div>}
+          {success && <div className='bg-emerald-800/80 text-white text-center text-xl py-1 '>Email sent successfully!</div>}
+          {error && <div className='bg-rose-800/80 text-white text-center text-xl py-1 '> oops! Something went Wrong</div>}
         </form>
       </div>
     </div>
