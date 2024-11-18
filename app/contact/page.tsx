@@ -88,7 +88,8 @@ const ContactPage = () => {
           )}
           {error && (
             <div className="bg-rose-800/80 text-white text-center text-xl py-1 ">
-              Can&apos; send due to free domain
+              Can&apos; send due to free domain. Please email me
+              bhrittik23@gmail.com
             </div>
           )}
         </form>
