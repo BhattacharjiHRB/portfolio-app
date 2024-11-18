@@ -84,7 +84,7 @@ const ContactPage = () => {
             Send
           </button>
           {success && <div className='bg-emerald-800/80 text-white text-center text-xl py-1 '>Email sent successfully!</div>}
-          {error && <div className='bg-rose-800/80 text-white text-center text-xl py-1 '> oops! Something went Wrong</div>}
+          {error && <div className='bg-rose-800/80 text-white text-center text-xl py-1 '>Can't send due to free domain</div>}
         </form>
       </div>
     </div>
