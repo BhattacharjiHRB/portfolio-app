@@ -70,7 +70,7 @@ const ProjectPage = () => {
               </defs>
               <text fill="#ffff">
                 <textPath xlinkHref="#circlePath" className="text-xl">
-                  Front-end Developer and UI Designer
+                  Frontend &amp; Backend Developer
                 </textPath>
               </text>
             </motion.svg>
