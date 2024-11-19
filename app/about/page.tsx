@@ -18,7 +18,7 @@ const AboutPage = () => {
   const experienceRef = useRef<HTMLDivElement>(null);
   const experienceShowing = useInView(experienceRef, { margin: "-100px" });
 
-  const filePath = "/mycv.pdf";
+  const filePath = "/my_cv.pdf";
 
   return (
     <div className=" h-full ">
@@ -44,11 +44,11 @@ const AboutPage = () => {
               that engage users effectively. Leveraging libraries like Axios, I
               ensure seamless communication between the frontend and backend
               systems, enhancing overall performance. Beyond my current skill
-              set, I am eagerly looking to expand my knowledge to include
-              ASP.NET for backend development. My enthusiasm for learning and
-              dedication to mastering new technologies drive me to continually
-              evolve and contribute innovative solutions to development
-              projects.
+              set, I am eagerly looking to expand my knowledge to include Go
+              Lang for backend development. Also I have beginner level
+              proficiency in ExpressJs My enthusiasm for learning and dedication
+              to mastering new technologies drive me to continually evolve and
+              contribute innovative solutions to development projects.
             </p>
             <div className="flex flex-row md:hidden space-x-5 ">
               {Socials.map((social) => (
@@ -159,10 +159,10 @@ const AboutPage = () => {
                 {" "}
                 Git
               </div>
-              <div className="rounded  p-2 text-sm bg-purple-800/80 text-violet-200  ">
+              {/* <div className="rounded  p-2 text-sm bg-purple-800/80 text-violet-200  ">
                 {" "}
                 Figma
-              </div>
+              </div> */}
               <div className="rounded  p-2 text-sm bg-purple-800/80 text-violet-200  ">
                 {" "}
                 ExpressJs

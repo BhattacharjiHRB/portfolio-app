@@ -18,7 +18,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-violet-500 mr-[10px] h-6 w-6" />
           <h1 className=" Welcome-text font-bold text-center">
-            Frontend Developer{" "}
+            Full-Stack Developer{" "}
           </h1>
         </motion.div>
         <motion.div
