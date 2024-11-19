@@ -112,7 +112,7 @@ const Navbar = () => {
               </motion.a>
               <motion.a
                 variants={navLinks}
-                href="/Projects"
+                href="/projects"
                 className=" cursor-pointer"
               >
                 {" "}
