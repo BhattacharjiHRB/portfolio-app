@@ -18,7 +18,7 @@ const AboutPage = () => {
   const experienceRef = useRef<HTMLDivElement>(null);
   const experienceShowing = useInView(experienceRef, { margin: "-100px" });
 
-  const filePath = "/my_cv.pdf";
+  const filePath = "/hrbResume.pdf";
 
   return (
     <div className=" h-full ">
