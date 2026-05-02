@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
-import { sectionContainer, fadeUp, scaleIn, viewportOnce } from "@/lib/motion";
+import { fadeUp, scaleIn, sectionContainer, viewportOnce } from "@/lib/motion";
+import { motion } from "framer-motion";
+import { Github, Mail, MapPin, Phone } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -25,10 +25,25 @@ const ContactSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { icon: Mail, label: "Email", value: personalInfo.email, href: `mailto:${personalInfo.email}` },
-            { icon: Phone, label: "Phone", value: personalInfo.phone, href: `tel:${personalInfo.phone}` },
+            {
+              icon: Mail,
+              label: "Email",
+              value: personalInfo.email,
+              href: `mailto:${personalInfo.email}`,
+            },
+            {
+              icon: Phone,
+              label: "Phone",
+              value: personalInfo.phone,
+              href: `tel:${personalInfo.phone}`,
+            },
             { icon: MapPin, label: "Location", value: personalInfo.location },
-            { icon: Github, label: "GitHub", value: personalInfo.github, href: `https://github.com/${personalInfo.github}` },
+            {
+              icon: Github,
+              label: "GitHub",
+              value: personalInfo.github,
+              href: `https://github.com/${personalInfo.github}`,
+            },
           ].map((item, i) => (
             <motion.div key={i} variants={scaleIn}>
               {item.href ? (
@@ -36,17 +51,28 @@ const ContactSection = () => {
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="glass rounded-xl p-5 flex flex-col items-center gap-3 hover:border-primary/30 transition-colors group block hover-lift"
+                  className="glass rounded-xl p-5 flex flex-col items-center gap-3 hover:border-primary/30 transition-colors group hover-lift"
                 >
-                  <item.icon size={20} className="text-primary group-hover:scale-110 transition-transform" />
-                  <span className="text-xs text-muted-foreground">{item.label}</span>
-                  <span className="text-sm text-foreground text-center break-all">{item.value}</span>
+                  <item.icon
+                    size={20}
+                    className="text-primary group-hover:scale-110 transition-transform"
+                  />
+                  <span className="text-xs text-muted-foreground">
+                    {item.label}
+                  </span>
+                  <span className="text-sm text-foreground text-center break-all">
+                    {item.value}
+                  </span>
                 </a>
               ) : (
                 <div className="glass rounded-xl p-5 flex flex-col items-center gap-3">
                   <item.icon size={20} className="text-primary" />
-                  <span className="text-xs text-muted-foreground">{item.label}</span>
-                  <span className="text-sm text-foreground text-center">{item.value}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {item.label}
+                  </span>
+                  <span className="text-sm text-foreground text-center">
+                    {item.value}
+                  </span>
                 </div>
               )}
             </motion.div>
