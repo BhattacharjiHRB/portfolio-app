@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { blogPosts } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { blogPosts } from "@/data/portfolio";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -35,19 +35,26 @@ const Blog = () => {
               >
                 <Link
                   to={`/blog/${post.id}`}
-                  className="glass rounded-xl p-6 block hover:border-primary/30 transition-colors group"
+                  className="glass rounded-xl p-6 block hover:border-primary/30 transition-colors group hover-lift "
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
+                    <span className="text-xs font-mono text-muted-foreground">
+                      {post.date}
+                    </span>
                   </div>
                   <h2 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-secondary-foreground mb-4">{post.excerpt}</p>
+                  <p className="text-sm text-secondary-foreground mb-4">
+                    {post.excerpt}
+                  </p>
                   <div className="flex items-center justify-between">
                     <div className="flex gap-2">
                       {post.tags.map((tag) => (
-                        <span key={tag} className="text-xs font-mono px-2 py-1 rounded bg-secondary text-muted-foreground">
+                        <span
+                          key={tag}
+                          className="text-xs font-mono px-2 py-1 rounded bg-secondary text-muted-foreground"
+                        >
                           {tag}
                         </span>
                       ))}

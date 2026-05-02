@@ -1,7 +1,13 @@
-import { motion } from "framer-motion";
 import { skills } from "@/data/portfolio";
+import { motion } from "framer-motion";
 
-const SkillBadge = ({ skill, index }: { skill: string; index: number }) => (
+export const SkillBadge = ({
+  skill,
+  index,
+}: {
+  skill: string;
+  index: number;
+}) => (
   <motion.span
     initial={{ opacity: 0, scale: 0.8 }}
     whileInView={{ opacity: 1, scale: 1 }}
