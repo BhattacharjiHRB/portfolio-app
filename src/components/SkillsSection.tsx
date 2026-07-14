@@ -72,7 +72,8 @@ const SkillsSection = () => {
               ))}
             </div>
           </div>
-          <div className="glass rounded-xl p-6">
+        </div>
+          <div className="glass rounded-xl p-6 mt-8 ">
           <h3 className="font-display font-semibold text-foreground mb-4 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-purple-500" />
             AI / ML
@@ -82,7 +83,6 @@ const SkillsSection = () => {
               <SkillBadge key={s} skill={s} index={i} />
             ))}
           </div>
-        </div>
         </div>
       </div>
     </section>
