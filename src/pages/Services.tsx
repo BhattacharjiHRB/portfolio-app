@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import { SkillBadge } from "@/components/SkillsSection";
 import { projects, skills } from "@/data/portfolio";
 import { motion } from "framer-motion";
-import { Code, Server, ShieldCheck } from "lucide-react";
+import { Brain, Code, Server, ShieldCheck } from "lucide-react";
 
 const services = [
   {
@@ -31,16 +31,11 @@ const services = [
     ],
   },
   {
-    icon: ShieldCheck,
-    title: "Cybersecurity Consultation",
+    icon: Brain,
+    title: "AI / ML Solutions",
     description:
-      "Identifying vulnerabilities, performing security assessments, and implementing best practices to protect your systems.",
-    highlights: [
-      "Vulnerability Assessment",
-      "Penetration Testing",
-      "Security Audits",
-      "Risk Mitigation",
-    ],
+      "Building intelligent AI chatbots, agentic AI workflows, and predictive classification systems that automate tasks and deliver data-driven insights.",
+    highlights: ["AI Chatbot Development", "Agentic AI Workflows", "Predictive Classification", "NLP & Automation"],
   },
 ];
 

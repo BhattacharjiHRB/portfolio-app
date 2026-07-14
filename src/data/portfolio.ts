@@ -57,7 +57,7 @@ export const education = [
 ];
 
 export const skills = {
-  languages: ["C++", "C#", "PHP", "Java", "JavaScript"],
+  languages: ["C++", "C#", "PHP", "Java", "JavaScript", "TypeScript", "Python"],
   frontend: [
     "Next.js",
     "React.js",
@@ -80,6 +80,20 @@ export const skills = {
     "PostgreSQL",
     "MySQL",
   ],
+
+  aiMl: [
+    "LangChain",
+    "OpenAI API",
+    "Hugging Face",
+    "Claude API",
+    "TensorFlow",
+    "RAG",
+    "Azure AI",
+    "Excel",
+    "Matplotlib",
+    "pyTorch",
+  ]
+   
 };
 
 export const projects = [
