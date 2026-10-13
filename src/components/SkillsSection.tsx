@@ -84,6 +84,17 @@ const SkillsSection = () => {
             ))}
           </div>
         </div>
+        <div className="glass rounded-xl p-6 mt-8 ">
+          <h3 className="font-display font-semibold text-foreground mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-blue-500" />
+            Microsoft & Cloud
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {skills.microCloud.map((s, i) => (
+              <SkillBadge key={s} skill={s} index={i} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -13,6 +13,22 @@ export const personalInfo = {
 
 export const experiences = [
   {
+    company: "Elevate Solutions Limited",
+    role: "Technology Specialist",
+    type: "Dhaka, Bangladesh",
+    period: "June 2026 - Present",
+    url: "https://elevateltd.net/",
+    highlights: [
+      'Built Power Apps canvas apps backed by SharePoint Lists as the data layer',
+      'Automated business workflows with Power Automate',
+      'Designed SharePoint list structures for data management, including columns, views and permissions',
+      'Learned and applied Azure Automation Runbooks to script repeatable operations tasks.',
+      'Provisioned infrastructure as code with Terraform and deployed and configured Azure Virtual Machines.',
+      'Developed an AI chatbot for M365 support engineers.',
+      'Built an agentic AI chatbot with a Next.js frontend and a Flask backend.'
+    ]
+  },
+  {
     company: "Blink Curacao",
     role: "Software Developer (Frontend)",
     type: "Remote",
@@ -27,7 +43,7 @@ export const experiences = [
   {
     company: "Cycaf Pvt. Ltd.",
     role: "Junior Software Developer",
-    type: "Banani, Dhaka",
+    type: "Dhaka, Bangladesh",
     period: "May 2023 - May 2024",
     url: "https://cycaf.com/",
     highlights: [
@@ -92,6 +108,16 @@ export const skills = {
     "Excel",
     "Matplotlib",
     "pyTorch",
+  ],
+  microCloud:[
+    "Azure",
+    "Power Automate",
+    "Power Apps",
+    "Terraform",
+    "Azure Automation Runbooks",
+    "Microsoft 365",
+    "SharePoint",
+    "Terraform",
   ]
    
 };

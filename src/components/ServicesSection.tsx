@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Code, Server, ShieldCheck } from "lucide-react";
+import { Brain, Cloud, Code, Server, ShieldCheck } from "lucide-react";
 import { sectionContainer, fadeUp, viewportOnce } from "@/lib/motion";
 
 const services = [
@@ -24,6 +24,20 @@ const services = [
       "Building intelligent AI chatbots, agentic AI workflows, and predictive classification systems that automate tasks and deliver data-driven insights.",
     highlights: ["AI Chatbot Development", "Agentic AI Workflows", "Predictive Classification", "AI Automation", "RAG - Retrieval-Augmented Generation" ],
   },
+  {
+    icon: Cloud,
+    title: "Microsoft & Cloud Solutions",
+    description:
+      "Building business apps and automated workflows on Microsoft Power Platform, and automating cloud operations on Azure. Power Apps canvas apps, Power Automate flows, SharePoint-based data solutions, and infrastructure as code with Terraform.",
+    highlights: [
+      "Power Apps Canvas Apps",
+      "Power Automate Workflows",
+      "SharePoint Lists & Data Management",
+      "Azure Runbook Automation",
+      "Terraform (Infrastructure as Code)",
+      "Azure Virtual Machines",
+    ],
+  }
 ];
 
 const ServicesSection = () => {
@@ -46,7 +60,7 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={i}
