@@ -1,44 +1,9 @@
 import { motion } from "framer-motion";
 import { Brain, Cloud, Code, Server, ShieldCheck } from "lucide-react";
 import { sectionContainer, fadeUp, viewportOnce } from "@/lib/motion";
+import { services } from "@/data/portfolio";
 
-const services = [
-  {
-    icon: Code,
-    title: "Frontend Development",
-    description:
-      "Building modern, responsive, and performant web applications using React, Next.js, Tailwind CSS, and TypeScript. Pixel-perfect UI with smooth animations and seamless user experiences.",
-    highlights: ["React & Next.js Apps", "Responsive Design", "UI/UX Implementation", "Performance Optimization"],
-  },
-  {
-    icon: Server,
-    title: "Backend Development",
-    description:
-      "Designing and developing robust server-side solutions with Node.js, Express, NestJS, and Hono.js. RESTful APIs, database architecture, and scalable backend systems.",
-    highlights: ["REST API Development", "Database Design", "Authentication Systems", "Server Architecture"],
-  },
-  {
-    icon: Brain,
-    title: "AI / ML Solutions",
-    description:
-      "Building intelligent AI chatbots, agentic AI workflows, and predictive classification systems that automate tasks and deliver data-driven insights.",
-    highlights: ["AI Chatbot Development", "Agentic AI Workflows", "Predictive Classification", "AI Automation", "RAG - Retrieval-Augmented Generation" ],
-  },
-  {
-    icon: Cloud,
-    title: "Microsoft & Cloud Solutions",
-    description:
-      "Building business apps and automated workflows on Microsoft Power Platform, and automating cloud operations on Azure. Power Apps canvas apps, Power Automate flows, SharePoint-based data solutions, and infrastructure as code with Terraform.",
-    highlights: [
-      "Power Apps Canvas Apps",
-      "Power Automate Workflows",
-      "SharePoint Lists & Data Management",
-      "Azure Runbook Automation",
-      "Terraform (Infrastructure as Code)",
-      "Azure Virtual Machines",
-    ],
-  }
-];
+
 
 const ServicesSection = () => {
   return (

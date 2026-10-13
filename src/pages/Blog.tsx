@@ -3,9 +3,31 @@ import Navbar from "@/components/Navbar";
 import { blogPosts } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+const POSTS_PER_PAGE = 10;
+
 const Blog = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const sortedPosts = useMemo(
+    () =>
+      [...blogPosts].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+      ),
+    [],
+  );
+
+  const totalPages = Math.max(1, Math.ceil(sortedPosts.length / POSTS_PER_PAGE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const startIndex = (safeCurrentPage - 1) * POSTS_PER_PAGE;
+  const visiblePosts = sortedPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+
+  const changePage = (page: number) => {
+    setCurrentPage(Math.min(Math.max(page, 1), totalPages));
+  };
+
   return (
     <>
       <Navbar />
@@ -26,7 +48,7 @@ const Blog = () => {
           </motion.div>
 
           <div className="space-y-6">
-            {blogPosts.map((post, i) => (
+            {visiblePosts.map((post, i) => (
               <motion.div
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -35,7 +57,7 @@ const Blog = () => {
               >
                 <Link
                   to={`/blog/${post.id}`}
-                  className="glass rounded-xl p-6 block hover:border-primary/30 transition-colors group hover-lift "
+                  className="glass rounded-xl p-6 block hover:border-primary/30 transition-colors group hover-lift"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-mono text-muted-foreground">
@@ -67,6 +89,43 @@ const Blog = () => {
               </motion.div>
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <div className="mt-8 flex items-center justify-center gap-2 flex-wrap">
+              <button
+                type="button"
+                onClick={() => changePage(safeCurrentPage - 1)}
+                disabled={safeCurrentPage === 1}
+                className="px-3 py-2 text-sm rounded-md border border-border bg-background text-foreground disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                Prev
+              </button>
+
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => changePage(page)}
+                  className={`w-9 h-9 rounded-md text-sm font-mono border transition-colors ${
+                    page === safeCurrentPage
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "border-border bg-background text-foreground hover:border-primary/50"
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                type="button"
+                onClick={() => changePage(safeCurrentPage + 1)}
+                disabled={safeCurrentPage === totalPages}
+                className="px-3 py-2 text-sm rounded-md border border-border bg-background text-foreground disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </main>
       <Footer />
