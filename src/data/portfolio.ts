@@ -8,7 +8,7 @@ export const personalInfo = {
   phone: "+8801724198636",
   website: "https://hrittik-portfolio.vercel.app/",
   github: "BhattacharjiHRB",
-  linkedin: "hrittik-bhattacharjee-8a9178278",
+  linkedin: "hrittik-bhattacharjee-19461a44a",
   summary:
     "Dedicated and enthusiastic Developer with a strong passion for coding and a keen interest in frontend development. Skilled in building modern, responsive web applications with clean and efficient code. With a solid foundation in programming principles and a hunger for learning new technologies, I thrive on challenges and take pride in delivering high-quality solutions.",
 };
@@ -16,7 +16,7 @@ export const personalInfo = {
 export const experiences = [
   {
     company: "Elevate Solutions Limited",
-    role: "Technology Specialist",
+    role: "Cloud & AI - Engineer",
     type: "Dhaka, Bangladesh",
     period: "June 2026 - Present",
     url: "https://elevateltd.net/",
